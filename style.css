@@ -247,6 +247,15 @@ footer p{
         justify-content: flex-end;
         text-align: center;
     }
+    .menu>a {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5rem 0;
+        width: 100%;
+        color: white;
+        background-color: #ffffff;
+    }
     #navbar ~ .menu a{
         /* display: none; */
         height: 0;
@@ -254,25 +263,15 @@ footer p{
         padding: 0;
         border: 0;
         cursor: default;
-
     }
     #navbar:checked ~ .menu a{
         /* display: flex; */
         border: 1px solid #333;
         color: black;
-        height: 2.5em;
-        padding: 0.5em;
+        height: 2.5rem;
+        padding: 0.5rem;
         transition: height 300ms;
         cursor: pointer;
-    }
-    .menu>a {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0.5em 0;
-        width: 100%;
-        color: white;
-        background-color: #ffffff;
     }
     .top{
         flex-direction: column;
