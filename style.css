@@ -299,4 +299,7 @@ footer p{
         flex-direction: column;
         align-items: center;
     }
+    .bottom>*{
+        margin-inline: 10px;
+    }
 }
