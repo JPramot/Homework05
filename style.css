@@ -7,6 +7,10 @@
 body{
     font-family: 'Raleway', sans-serif;
     height: 100%;
+    /* width: 70%; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
 
 /*navbar*/
@@ -17,6 +21,8 @@ body{
     height: 50px;
     border-bottom: 1px solid black;
     padding-top: 1rem;
+    width: 70%;
+    margin: auto;
 }
 .head input[type=checkbox]{
     display: none;
@@ -76,6 +82,10 @@ body{
     background-color: rgba( 0, 0, 0, 0);
 }
 
+main{
+    width: 70%;
+    margin: auto;
+}
 /*main top*/
 .top{
     display: flex;
@@ -281,6 +291,9 @@ footer p{
     .obj{
         flex-direction: column;
         align-items: center;
+    }
+    .item{
+        width: 70%;
     }
     .box{
         flex-direction: column;
