@@ -6,11 +6,6 @@
 }
 body{
     font-family: 'Raleway', sans-serif;
-    height: 100%;
-    /* width: 70%; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 /*navbar*/
@@ -46,10 +41,12 @@ body{
 .button::before{
     content: ' ';
     margin-top: -8px;
+    transition: 0.5s;
 }
 .button::after{
     content: ' ';
     margin-top: 8px;
+    transition: 0.5s;
 }
 .menu{
     display: flex;
@@ -73,10 +70,12 @@ body{
 #navbar:checked + .menu-container .button::before{
     margin-top: 0px;
     transform: rotate(310deg);
+    transition: 0.5s;
 }
 #navbar:checked + .menu-container .button::after{
     margin-top: 0;
     transform: rotate(-310deg);
+    transition: 0.5s;
 }
 #navbar:checked + .menu-container .button{
     background-color: rgba( 0, 0, 0, 0);
@@ -152,7 +151,7 @@ main{
 }
 .item{
     width: 45%;
-    margin-inline: 50px;
+    margin-inline: 30px;
     background-color: white;
     margin-bottom: 30px;
 }
@@ -233,7 +232,7 @@ footer p{
 }
 
 /*media*/
-@media (max-width:750px){
+@media (max-width:800px){
     .menu-container{
         display: flex;
     }
@@ -254,16 +253,17 @@ footer p{
         margin: 0;
         padding: 0;
         border: 0;
-        transition: height 400ms;
+        cursor: default;
 
     }
     #navbar:checked ~ .menu a{
-        /* display: block; */
+        /* display: flex; */
         border: 1px solid #333;
         color: black;
         height: 2.5em;
         padding: 0.5em;
-        transition: height 400ms;
+        transition: height 300ms;
+        cursor: pointer;
     }
     .menu>a {
         display: flex;

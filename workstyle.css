@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.head{
+    display: flex;
+    height: 50px;
+    width: 70%;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding-top: 1rem;
+    margin: auto;
+}
+.head input[type=checkbox]{
+    display: none;
+}
+.menu-container{
+    display: none;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.button, 
+.button::before, 
+.button::after{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+}
+.button::after{
+    margin-top: -8px;
+    content: ' ';
+    transition: 0.5s;
+}
+.button::before{
+    margin-top: 8px;
+    content: ' ';
+    transition: 0.5s;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    list-style-type: none;
+    margin-inline-end: 50px;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.menu a:hover{
+    font-size: 1.3rem;
+    opacity: 0.5;
+    transition: 0.3s;
+}#navbar:checked + .menu-container .button{
+    background-color: rgba(0, 0, 0, 0);
+}
+#navbar:checked + .menu-container .button::after{
+    margin-top: 0;
+    transform: rotate(310deg);
+    transition: 0.5s;
+}
+#navbar:checked + .menu-container .button::before{
+    margin-top: 0;
+    transform: rotate(-310deg);
+    transition: 0.5s;
+}
+main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    gap: 12px;
+}
+.top h2{
+    padding: 8px;
+    font-size: 2rem;
+}
+.obj{
+    display: flex;
+    gap: 16px;
+    font-size: 1.2rem;
+}
+.date{
+    margin-block: 12px;
+    display: flex;
+    gap: 16px;
+}
+.date>p:first-child{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.date>*{
+    padding: 4px 8px;
+}
+.footlink{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-block-start:40px;
+}
+.footlink a{
+    font-size: 2.5rem;
+    color: blue;
+}
+.footlink a:hover{
+    font-size: 2.7rem;
+    opacity: 0.5;
+    transition: 400ms;
+}
+footer p{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+
+@media (max-width:800px){
+    .menu-container {
+        display: flex;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-right: 0;
+        margin-top: 50px;
+        right: 0;
+        flex-direction: column;
+        width: 30%;
+        justify-content: flex-end;
+        text-align: center;
+        gap: 0;
+        }
+    #navbar~.menu a {
+        /* display: none; */
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        cursor: default;
+    }
+    #navbar:checked~.menu a {
+        /* display: flex; */
+        border: 1px solid #333;
+        color: black;
+        height: 2.5em;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: height 300ms;
+    }
+    .menu>a {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #ffffff;
+    }
+    .obj{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
